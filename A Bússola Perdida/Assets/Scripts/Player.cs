@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
         }
     }
      
-    void OnCollissionEnter2D(Collision2D collision){
+    void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.layer == 8){
             isJumping = false;
         }
