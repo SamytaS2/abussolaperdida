@@ -5,9 +5,8 @@ public class Coletáveis : MonoBehaviour
     private SpriteRenderer sr;
     private CircleCollider2D circle;
 
-    public GameObject collected;
     public int score;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -16,13 +15,15 @@ public class Coletáveis : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider2D)
     {
-        if (collider.gameObject.tag == "Player")
+        if (collider2D.gameObject.tag == "Player")
         {
             sr.enabled = false;
+            circle.enabled = false;
+            GameController.instance.totalScore += score;
+            GameController.instance.UpdateScoreText();
+            Destroy(gameObject, 0.3f); // destrói após um pequeno delay
         }
     }
-    void Update()
-    {
-        
-    }
+    
+   
 }
