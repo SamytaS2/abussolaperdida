@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class Coletáveis : MonoBehaviour
+public class Coletaveis : MonoBehaviour
 {
     private SpriteRenderer sr;
     private CircleCollider2D circle;
 
-    public int score;
+    public int score = 1;
     
     void Start()
     {
@@ -15,7 +15,7 @@ public class Coletáveis : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider2D)
     {
-        if (collider2D.gameObject.tag == "Player")
+        if (collider2D.CompareTag("Player"))
         {
             sr.enabled = false;
             circle.enabled = false;
