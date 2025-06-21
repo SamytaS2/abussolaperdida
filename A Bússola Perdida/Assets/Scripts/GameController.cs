@@ -3,8 +3,13 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
-    public int totalScore;
-    public TMP_Text scoreText;
+    //Poções
+    public int totalScorePocoes;
+    public TMP_Text scoreTextPocoes;
+
+    //Moedas
+    public int totalScoreMoedas;
+    public TMP_Text scoreTextMoedas;
 
     public static GameController instance;
 
@@ -15,7 +20,8 @@ public class GameController : MonoBehaviour
 
     public void UpdateScoreText()
     {
-        scoreText.text = totalScore.ToString();
+        scoreTextPocoes.text = totalScorePocoes.ToString();
+        scoreTextMoedas.text = totalScoreMoedas.ToString();
     }
 
 }

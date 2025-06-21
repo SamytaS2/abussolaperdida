@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class Coletaveis : MonoBehaviour
+public class Pocoes : MonoBehaviour
 {
     private SpriteRenderer sr;
     private CircleCollider2D circle;
 
-    public int score = 1;
+    public int scorePocoes = 1;
     
     void Start()
     {
@@ -19,7 +19,7 @@ public class Coletaveis : MonoBehaviour
         {
             sr.enabled = false;
             circle.enabled = false;
-            GameController.instance.totalScore += score;
+            GameController.instance.totalScorePocoes += scorePocoes;
             GameController.instance.UpdateScoreText();
             Destroy(gameObject, 0.3f); // destrói após um pequeno delay
         }

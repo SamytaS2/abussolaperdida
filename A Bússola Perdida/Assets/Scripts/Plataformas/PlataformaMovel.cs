@@ -8,13 +8,11 @@ public class PlataformaMovel : MonoBehaviour
 
     private Vector3 destinoAtual;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         destinoAtual = pontoB.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, destinoAtual, speed * Time.deltaTime);
@@ -24,6 +22,18 @@ public class PlataformaMovel : MonoBehaviour
                 destinoAtual = pontoB.position;
             else
                 destinoAtual = pontoA.position;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.CompareTag("Player")){
+            collision.transform.SetParent(transform);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision){
+        if(collision.gameObject.CompareTag("Player")){
+            collision.transform.SetParent(null);
         }
     }
 }

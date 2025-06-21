@@ -22,7 +22,7 @@ public class PlataformaCaindo : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collider2D collider){
-        if(collider.gameObject.layer == 9){
+        if(collider.gameObject.CompareTag("PlataformaQueCai")){
             Destroy(gameObject);
         }
     }
