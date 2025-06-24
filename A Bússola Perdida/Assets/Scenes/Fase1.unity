@@ -1430,6 +1430,24 @@ MonoBehaviour:
   pontoA: {fileID: 303882144}
   pontoB: {fileID: 703226897}
   speed: 2
+--- !u!1 &1458991576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1305470999788609351, guid: c29addc894c4d674b9ca7832403e787f, type: 3}
+  m_PrefabInstance: {fileID: 5604555255418466233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1458991577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458991576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb98cddfd402824f9e141d6b1730673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeGiro: 50
 --- !u!1 &1971612579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,7 +2012,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1305470999788609351, guid: c29addc894c4d674b9ca7832403e787f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1458991577}
   m_SourcePrefab: {fileID: 100100000, guid: c29addc894c4d674b9ca7832403e787f, type: 3}
 --- !u!1001 &8093765370327545008
 PrefabInstance:
