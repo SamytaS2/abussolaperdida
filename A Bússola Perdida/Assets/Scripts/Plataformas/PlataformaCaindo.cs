@@ -1,10 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlataformaCaindo : MonoBehaviour
 {
-    public float fallingTime;
+    public float fallingTime = 0.5f;
 
     private TargetJoint2D target;
     private BoxCollider2D boxColl;
@@ -15,21 +14,19 @@ public class PlataformaCaindo : MonoBehaviour
         boxColl = GetComponent<BoxCollider2D>();
     }
 
-    void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.tag == "Player"){
+    // Quando o player encostar, inicia o processo de queda
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
             Invoke("Falling", fallingTime);
         }
     }
 
-    void OnCollisionEnter2D(Collider2D collider){
-        if(collider.gameObject.CompareTag("PlataformaQueCai")){
-            Destroy(gameObject);
-        }
+    // Método chamado via Invoke após o tempo
+    void Falling()
+    {
+        if (target != null) target.enabled = false;
+        if (boxColl != null) boxColl.isTrigger = true;
     }
-
-    void Falling(){
-        target.enabled = false;
-        boxColl.isTrigger = true;
-    }
-    
 }

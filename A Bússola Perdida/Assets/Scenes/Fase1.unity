@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
-  JumpForce: 10
+  JumpForce: 5
   isJumping: 0
   doubleJump: 0
 --- !u!1 &295621310
@@ -477,7 +477,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0.2830189, b: 0.068489045, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -971,6 +971,53 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8998631, y: 0.55740297}
   m_EdgeRadius: 0
+--- !u!257 &843881623
+TargetJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843881615}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_Anchor: {x: 0, y: 0}
+  m_Target: {x: 0.44353122, y: -1.3421303}
+  m_AutoConfigureTarget: 1
+  m_MaxForce: 10000
+  m_DampingRatio: 1
+  m_Frequency: 5
+--- !u!50 &843881624
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843881615}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &892268354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,6 +1916,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaCai
       objectReference: {fileID: 0}
+    - target: {fileID: 1887715002577193210, guid: 1db149946f578b143905b6725bfa5de8, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887715002577193210, guid: 1db149946f578b143905b6725bfa5de8, type: 3}
+      propertyPath: m_TagString
+      value: PlataformaQueCai
+      objectReference: {fileID: 0}
     - target: {fileID: 3610513218300814270, guid: 1db149946f578b143905b6725bfa5de8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.232
@@ -1916,6 +1971,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1887715002577193210, guid: 1db149946f578b143905b6725bfa5de8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 843881619}
+    - targetCorrespondingSourceObject: {fileID: 1887715002577193210, guid: 1db149946f578b143905b6725bfa5de8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 843881624}
+    - targetCorrespondingSourceObject: {fileID: 1887715002577193210, guid: 1db149946f578b143905b6725bfa5de8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 843881623}
   m_SourcePrefab: {fileID: 100100000, guid: 1db149946f578b143905b6725bfa5de8, type: 3}
 --- !u!1001 &8160593425166631762
 PrefabInstance:
@@ -2033,6 +2094,14 @@ PrefabInstance:
     - target: {fileID: 8835513235943021252, guid: 3f95bf452d1d37f478f85213f8b52b3b, type: 3}
       propertyPath: m_Name
       value: PlataformaMovel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835513235943021252, guid: 3f95bf452d1d37f478f85213f8b52b3b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835513235943021252, guid: 3f95bf452d1d37f478f85213f8b52b3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

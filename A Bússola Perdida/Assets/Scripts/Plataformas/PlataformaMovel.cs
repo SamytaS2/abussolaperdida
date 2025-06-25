@@ -5,7 +5,7 @@ public class PlataformaMovel : MonoBehaviour
 {
     public Transform pontoA;
     public Transform pontoB;
-    public float speed = 2f;
+    public float velocidade = 2f;
 
     private Vector3 destinoAtual;
 
@@ -16,13 +16,11 @@ public class PlataformaMovel : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, destinoAtual, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, destinoAtual, velocidade * Time.deltaTime);
+
         if (Vector3.Distance(transform.position, destinoAtual) < 0.1f)
         {
-            if (Vector3.Distance(destinoAtual, pontoA.position) < 0.1f)
-                destinoAtual = pontoB.position;
-            else
-                destinoAtual = pontoA.position;
+            destinoAtual = destinoAtual == pontoA.position ? pontoB.position : pontoA.position;
         }
     }
 
@@ -38,13 +36,17 @@ public class PlataformaMovel : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(RemoverPaiDepoisDeUmFrame(collision.transform));
+            // Em vez de usar SetParent(null) direto, usamos uma coroutine para evitar erro
+            StartCoroutine(SoltarPlayerNoProximoFrame(collision.transform));
         }
     }
 
-    private IEnumerator RemoverPaiDepoisDeUmFrame(Transform filho)
+    IEnumerator SoltarPlayerNoProximoFrame(Transform player)
     {
-        yield return null;
-        filho.SetParent(null);
+        yield return null; // Espera 1 frame
+        if (player != null)
+        {
+            player.SetParent(null);
+        }
     }
 }
