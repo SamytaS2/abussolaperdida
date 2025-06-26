@@ -10,7 +10,7 @@ public class GameOverController : MonoBehaviour
         if (string.IsNullOrEmpty(cenaAnterior))
         {
             Debug.LogWarning("Cena anterior não definida! Voltando para o menu principal.");
-            SceneManager.LoadScene("MenuPrincipal"); // ou qualquer cena padrão que você tenha
+            SceneManager.LoadScene("TelaInicial"); // ou qualquer cena padrão que você tenha
         }
         else
         {
