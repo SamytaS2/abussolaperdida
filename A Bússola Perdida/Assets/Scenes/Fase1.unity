@@ -1677,6 +1677,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1694459926157203298, guid: c29addc894c4d674b9ca7832403e787f, type: 3}
   m_PrefabInstance: {fileID: 8160593425166631762}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1662843184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1662843186}
+  - component: {fileID: 1662843185}
+  m_Layer: 0
+  m_Name: GameOverController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1662843185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662843184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c2aaaa4ae7ef03499b1cf14d6b439db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1662843186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662843184}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.7476885, y: -0.21067762, z: -9.940274}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1971612579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,3 +2452,4 @@ SceneRoots:
   - {fileID: 911309893}
   - {fileID: 794538425}
   - {fileID: 1444462551}
+  - {fileID: 1662843186}
