@@ -11,12 +11,12 @@ public class Player : MonoBehaviour
     public bool doubleJump;
 
     private Rigidbody2D rig;
-    private Animator anim;
+    //private Animator anim;
 
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -30,17 +30,17 @@ public class Player : MonoBehaviour
         transform.position += moviment * Time.deltaTime * Speed;
 
         if(Input.GetAxis("Horizontal") > 0f){
-            anim.SetBool("Walk", true);
+            //anim.SetBool("Walk", true);
             transform.eulerAngles = new Vector3(0f, 0f, 0f);
         }
 
         if(Input.GetAxis("Horizontal") < 0f){
-           anim.SetBool("Walk", true);
+           //anim.SetBool("Walk", true);
            transform.eulerAngles = new Vector3(0f, 180f, 0f); 
         }
 
         if(Input.GetAxis("Horizontal") == 0f){
-            anim.SetBool("Walk", false);
+            //anim.SetBool("Walk", false);
         }
     }
 
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
             {
                 rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
                 doubleJump = true;
-                anim.SetBool("Jump", true);
+                //anim.SetBool("Jump", true);
             }
             else
             {
@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
                 {
                     rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
                     doubleJump = false;
-                    anim.SetBool("Jump", true);
+                    //anim.SetBool("Jump", true);
                 }
             }
         }
@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
             isJumping = false;
-            anim.SetBool("Jump", false);
+            //anim.SetBool("Jump", false);
         }
 
         /*if(collision.gameObject.tag == "EndOfLevel"){
