@@ -13,6 +13,8 @@ public class GameController : MonoBehaviour
 
     public static GameController instance;
 
+    public GameObject gameOver;
+
     void Start()
     {
         instance = this;
@@ -22,6 +24,11 @@ public class GameController : MonoBehaviour
     {
         scoreTextPocoes.text = totalScorePocoes.ToString();
         scoreTextMoedas.text = totalScoreMoedas.ToString();
+    }
+
+    public void ShowGameOver()
+    {
+        gameOver.SetActive(true);
     }
 
 }

@@ -71,14 +71,12 @@ public class Player : MonoBehaviour
             //anim.SetBool("Jump", false);
         }
 
-        /*if(collision.gameObject.tag == "EndOfLevel"){
-            GameController.instance.PassLvl();
-        }
 
-        if(collision.gameObject.tag == "Spike"){
+        if(collision.gameObject.tag == "Espinho"){
+            Debug.Log("Tocou o espinho!");
             GameController.instance.ShowGameOver();
             Destroy(gameObject);
-        }*/
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision){
