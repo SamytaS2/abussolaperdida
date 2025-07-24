@@ -72,8 +72,7 @@ public class Player : MonoBehaviour
         }
 
 
-        if(collision.gameObject.tag == "Espinho"){
-            Debug.Log("Tocou o espinho!");
+        if(collision.gameObject.tag == "Perigo"){
             GameController.instance.ShowGameOver();
             Destroy(gameObject);
         }

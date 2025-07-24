@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -31,5 +32,8 @@ public class GameController : MonoBehaviour
         gameOver.SetActive(true);
     }
 
+    public void Reiniciar(string faseNome){
+        SceneManager.LoadScene(faseNome);
+    }
 }
 

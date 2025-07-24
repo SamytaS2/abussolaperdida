@@ -990,7 +990,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 658958322}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 911309892}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: Reiniciar
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Fase1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &658958322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1635,6 +1647,7 @@ MonoBehaviour:
   scoreTextPocoes: {fileID: 1216503455}
   totalScoreMoedas: 0
   scoreTextMoedas: {fileID: 2048540857}
+  gameOver: {fileID: 1512713542}
 --- !u!4 &911309893
 Transform:
   m_ObjectHideFlags: 0
@@ -2483,7 +2496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1312537430}
   m_Layer: 0
-  m_Name: Espinhos
+  m_Name: Perigos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2522,12 +2535,12 @@ GameObject:
   - component: {fileID: 1512713545}
   - component: {fileID: 1512713544}
   m_Layer: 5
-  m_Name: Image
+  m_Name: PanelGameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1512713543
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2562,7 +2575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.54509807}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.68235296}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3049,8 +3062,8 @@ GameObject:
   - component: {fileID: 2128740958}
   - component: {fileID: 2128740957}
   m_Layer: 0
-  m_Name: Espinho
-  m_TagString: Espinho
+  m_Name: Perigo
+  m_TagString: Perigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3064,8 +3077,8 @@ Transform:
   m_GameObject: {fileID: 2128740955}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.812069, y: -3.9358668, z: -4.728352}
-  m_LocalScale: {x: 6.7836, y: 1, z: 1}
+  m_LocalPosition: {x: -3.2676, y: -4.47, z: -4.728352}
+  m_LocalScale: {x: 11.015649, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1312537430}
@@ -3100,7 +3113,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
