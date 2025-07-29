@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5ceaa95a42e264340be904c5d67b4214
+guid: 16a856f1ed859c144b33927a3f5ed4c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5299788333793493197
-    second: Moeda_0
+      213: -405058773514333122
+    second: "Inspira\xE7\xE3o background 2_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Moeda_0
+      name: "Inspira\xE7\xE3o background 2_0"
       rect:
         serializedVersion: 2
-        x: 138
-        y: 266
-        width: 362
-        height: 362
+        x: 0
+        y: 0
+        width: 1536
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc0458cf861ac8940800000000000000
-      internalID: 5299788333793493197
+      spriteID: e34d58b0131f06af0800000000000000
+      internalID: -405058773514333122
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Moeda_0: 5299788333793493197
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

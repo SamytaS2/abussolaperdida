@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: eaac2ba059e08b442b71763b09b28e26
+guid: 0d9a6e054e48342489b2b38f573dcec9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3218983603975319083
-    second: "B\xFAssola_0"
+      213: 4749580390933612816
+    second: RosaDosVentos_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "B\xFAssola_0"
+      name: RosaDosVentos_0
       rect:
         serializedVersion: 2
         x: 253
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2e61cc68802cac20800000000000000
-      internalID: 3218983603975319083
+      spriteID: 01942c18336e9e140800000000000000
+      internalID: 4749580390933612816
       vertices: []
       indices: 
       edges: []
