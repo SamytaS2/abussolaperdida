@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class Moedas : MonoBehaviour
+public class rosaDosVentos : MonoBehaviour
 {
     private SpriteRenderer sr;
     private CircleCollider2D circle;
 
-    public int scoreMoedas = 1;
+    public int scoreRosa = 1;
     
     void Start()
     {
@@ -19,7 +19,7 @@ public class Moedas : MonoBehaviour
         {
             sr.enabled = false;
             circle.enabled = false;
-            GameController.instance.totalScoreMoedas += scoreMoedas;
+            GameController.instance.totalScoreMoedas += scoreRosa;
             GameController.instance.UpdateScoreText();
             Destroy(gameObject, 0.3f); // destrói após um pequeno delay
         }
