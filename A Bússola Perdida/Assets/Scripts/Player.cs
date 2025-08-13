@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public bool isJumping;
     public bool doubleJump;
 
+    private AudioSource sound;
     private Rigidbody2D rig;
     //private Animator anim;
 
