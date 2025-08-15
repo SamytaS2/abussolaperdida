@@ -2,23 +2,30 @@ using UnityEngine;
 
 public class AnimMoeda : MonoBehaviour
 {
+    //Velocidade de rotação da moeda
     public int velocidadeGiro = 50;
-   // Start is called before the first frame update
+
+    //Start é chamado no início do jogo (não usado aqui)
     void Start()
     {
         
     }
 
-
-    private void OnTriggerEnter(Collider other){
-        if(other.tag == "Player"){
+    //Detecta quando outro objeto entra no trigger da moeda
+    private void OnTriggerEnter(Collider other)
+    {
+        //Se o objeto que entrou no trigger for o jogador...
+        if (other.tag == "Player")
+        {
+            //Destroi a moeda (coleta)
             Destroy(gameObject);
         }
     }
-    // Update is called once per frame
+
+    //Update é chamado a cada frame
     void Update()
     {
-        transform.Rotate(Vector3.up * velocidadeGiro * Time.deltaTime,Space.World);
-    }
-
+        //Faz a moeda girar no eixo Y (rotação no espaço do mundo)
+        transform.Rotate(Vector3.up * velocidadeGiro * Time.deltaTime, Space.World);
+    }
 }

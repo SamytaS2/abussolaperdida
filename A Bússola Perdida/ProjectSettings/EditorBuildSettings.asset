@@ -23,12 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase4.unity
     guid: 1b43938d867fc3847842199647750d03
-  - enabled: 1
-    path: "Assets/Scenes/TelaDeVit\xF3ria.unity"
-    guid: 88f2f7830d14cdd499e8905c8cefe04f
-  - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: 1e86d43e562844542b9ec41767bae058
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
