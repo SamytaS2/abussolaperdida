@@ -1,9 +1,12 @@
 using UnityEngine; //Biblioteca principal do Unity
 using TMPro; //Necessária para usar TextMeshPro (TMP_Text)
 using UnityEngine.SceneManagement; //Necessária para trocar de cena
-
+using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
+    public BarraDeVida barra;
+    private float vida = 100;
+
     //Pontuação de Poções
     public int totalScorePocoes; //Guarda a quantidade total de poções coletadas
     public TMP_Text scoreTextPocoes; //Texto UI para exibir a quantidade de poções
@@ -22,15 +25,15 @@ public class GameController : MonoBehaviour
     void Start()
     {
         //Define a instância estática como este objeto
-        instance = this; 
+        instance = this;
     }
 
     // Atualiza os textos na UI com os valores atuais de poções e moedas
     public void UpdateScoreText()
     {
         //Converte número para string e mostra
-        scoreTextPocoes.text = totalScorePocoes.ToString(); 
-        scoreTextMoedas.text = totalScoreMoedas.ToString(); 
+        scoreTextPocoes.text = totalScorePocoes.ToString();
+        scoreTextMoedas.text = totalScoreMoedas.ToString();
     }
 
     //Exibe o painel de Game Over
@@ -44,6 +47,21 @@ public class GameController : MonoBehaviour
     public void Reiniciar(string faseNome)
     {
         //Carrega a cena com o nome informado
-        SceneManager.LoadScene(faseNome); 
+        SceneManager.LoadScene(faseNome);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            vida -= 10.0f;
+            barra.AlterarVida(vida);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            vida += 10.0f;
+            barra.AlterarVida(vida);
+        }
     }
 }

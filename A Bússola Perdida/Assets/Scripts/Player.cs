@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -115,4 +116,5 @@ public class Player : MonoBehaviour
             isJumping = true; //marca que está no ar
         }
     }
+
 }
