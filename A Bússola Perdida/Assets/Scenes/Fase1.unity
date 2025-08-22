@@ -309,7 +309,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 0.05
   m_WholeNumbers: 0
-  m_Value: 0.01
+  m_Value: 0.05
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2799,7 +2799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d833f5167ac224f86f2d11d1e6e5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barra: {fileID: 0}
+  barra: {fileID: 199729777}
   totalScorePocoes: 0
   scoreTextPocoes: {fileID: 1216503455}
   totalScoreMoedas: 0
