@@ -24,9 +24,12 @@ public class GameController : MonoBehaviour
     //Chamado quando o jogo começa
     void Start()
     {
-        //Define a instância estática como este objeto
         instance = this;
+
+        // Inicializa a barra com vida cheia
+        barra.SetMaxVida(100);
     }
+
 
     // Atualiza os textos na UI com os valores atuais de poções e moedas
     public void UpdateScoreText()
@@ -54,14 +57,15 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            vida -= 10.0f;
+            vida = Mathf.Clamp(vida - 10f, 0f, 100f);
             barra.AlterarVida(vida);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            vida += 10.0f;
+            vida = Mathf.Clamp(vida + 10f, 0f, 100f);
             barra.AlterarVida(vida);
         }
     }
+
 }
