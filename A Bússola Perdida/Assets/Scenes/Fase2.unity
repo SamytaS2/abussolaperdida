@@ -2643,6 +2643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d833f5167ac224f86f2d11d1e6e5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barra: {fileID: 0}
   totalScorePocoes: 0
   scoreTextPocoes: {fileID: 0}
   totalScoreMoedas: 0
@@ -4204,12 +4205,32 @@ PrefabInstance:
       value: PasseLevel
       objectReference: {fileID: 0}
     - target: {fileID: 2344514418877054366, guid: 6a8d6553df726d54983a2a264d5e5b4c, type: 3}
+      propertyPath: imgRosa
+      value: 
+      objectReference: {fileID: 1182271310}
+    - target: {fileID: 2344514418877054366, guid: 6a8d6553df726d54983a2a264d5e5b4c, type: 3}
+      propertyPath: imgPocao
+      value: 
+      objectReference: {fileID: 1546422987}
+    - target: {fileID: 2344514418877054366, guid: 6a8d6553df726d54983a2a264d5e5b4c, type: 3}
+      propertyPath: scoreRosa
+      value: 
+      objectReference: {fileID: 2137520689}
+    - target: {fileID: 2344514418877054366, guid: 6a8d6553df726d54983a2a264d5e5b4c, type: 3}
+      propertyPath: scorePocao
+      value: 
+      objectReference: {fileID: 2137520689}
+    - target: {fileID: 2344514418877054366, guid: 6a8d6553df726d54983a2a264d5e5b4c, type: 3}
       propertyPath: nextLvlName
       value: Fase3
       objectReference: {fileID: 0}
+    - target: {fileID: 2344514418877054366, guid: 6a8d6553df726d54983a2a264d5e5b4c, type: 3}
+      propertyPath: PanelVictory
+      value: 
+      objectReference: {fileID: 584321542}
     - target: {fileID: 3052104019146426161, guid: 6a8d6553df726d54983a2a264d5e5b4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.29
+      value: -66.2
       objectReference: {fileID: 0}
     - target: {fileID: 3052104019146426161, guid: 6a8d6553df726d54983a2a264d5e5b4c, type: 3}
       propertyPath: m_LocalPosition.y
