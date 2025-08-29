@@ -141,7 +141,8 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -676,7 +677,7 @@ PlayerSettings:
   cloudProjectId: 327cb8ae-c293-45f0-91d5-edd63c48a60b
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: A Bússola Perdida
+  projectName: "A B\xFAssola Perdida"
   organizationId: unity_0e4f1b0f5d54974d9a5e
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
