@@ -101,11 +101,17 @@ public class Player : MonoBehaviour
         }
 
         //Tag "Perigo" = objeto que mata o jogador
-        if (collision.gameObject.tag == "Abismo")
+        if (collision.gameObject.CompareTag("Abismo"))
         {
             GameController.instance.ShowGameOver(); //mostra tela de game over
             Destroy(gameObject); //remove o jogador
         }
+
+        if (collision.gameObject.CompareTag("Perigo"))
+        {
+            GameController.instance.AlterarVida(-10f);
+        }
+
     }
 
     //Detecta quando o jogador sai do chão

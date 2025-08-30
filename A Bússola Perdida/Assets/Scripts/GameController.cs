@@ -2,6 +2,7 @@ using UnityEngine; //Biblioteca principal do Unity
 using TMPro; //Necessária para usar TextMeshPro (TMP_Text)
 using UnityEngine.SceneManagement; //Necessária para trocar de cena
 using UnityEngine.UI;
+using System;
 public class GameController : MonoBehaviour
 {
     public BarraDeVida barra;
@@ -53,18 +54,29 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(faseNome);
     }
 
+    public void AlterarVida(float quantidade)
+    {
+        vida = Mathf.Clamp(vida + quantidade, 0f, 100f);
+        barra.GerenciarVida(vida);
+
+        if (vida <= 0)
+        {
+            ShowGameOver();
+        }
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
             vida = Mathf.Clamp(vida - 10f, 0f, 100f);
-            barra.AlterarVida(vida);
+            barra.GerenciarVida(vida);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
             vida = Mathf.Clamp(vida + 10f, 0f, 100f);
-            barra.AlterarVida(vida);
+            barra.GerenciarVida(vida);
         }
     }
 
