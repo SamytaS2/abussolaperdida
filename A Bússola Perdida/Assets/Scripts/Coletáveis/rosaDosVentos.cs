@@ -23,15 +23,11 @@ public class rosaDosVentos : MonoBehaviour
         {
             //Desativa visualmente a rosa dos ventos
             sr.enabled = false;
-
             //Desativa o collider para evitar múltiplas coletas
             circle.enabled = false;
 
             //Adiciona a quantidade de pontos ao total de moedas/pontos do jogador
-            GameController.instance.totalScoreMoedas += scoreRosa;
-
-            //Atualiza o texto de UI com o novo total
-            GameController.instance.UpdateScoreText();
+            GameController.instance.AddRosa(scoreRosa);
 
             //Destroi o objeto após um pequeno delay, permitindo efeitos visuais ou sons
             Destroy(gameObject, 0.3f);

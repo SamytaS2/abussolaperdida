@@ -13,20 +13,26 @@ public class GameController : MonoBehaviour
     public TMP_Text scoreTextPocoes; //Texto UI para exibir a quantidade de poções
 
     //Pontuação de Moedas
-    public int totalScoreMoedas;     //Guarda a quantidade total de moedas coletadas
-    public TMP_Text scoreTextMoedas; //Texto UI para exibir a quantidade de moedas
+    public int totalScoreRosas;     //Guarda a quantidade total de moedas coletadas
+    public TMP_Text scoreTextRosas; //Texto UI para exibir a quantidade de moedas
 
     //Instância estática para acesso fácil a este controlador de qualquer outro script
     public static GameController instance;
 
     //Referência ao painel de Game Over (UI)
     public GameObject gameOver;
+    public GameObject imagePocao;
+    public GameObject imageRosa;
+    public GameObject barraDeVida;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     //Chamado quando o jogo começa
     void Start()
     {
-        instance = this;
-
         // Inicializa a barra com vida cheia
         barra.SetMaxVida(100);
     }
@@ -37,7 +43,7 @@ public class GameController : MonoBehaviour
     {
         //Converte número para string e mostra
         scoreTextPocoes.text = totalScorePocoes.ToString();
-        scoreTextMoedas.text = totalScoreMoedas.ToString();
+        scoreTextRosas.text = totalScoreRosas.ToString();
     }
 
     //Exibe o painel de Game Over
@@ -45,6 +51,9 @@ public class GameController : MonoBehaviour
     {
         //Ativa o objeto na cena
         gameOver.SetActive(true);
+        imagePocao.SetActive(false);
+        imageRosa.SetActive(false);
+        barraDeVida.SetActive(false);
     }
 
     //Reinicia a fase, recebendo o nome da cena como parâmetro
@@ -59,9 +68,21 @@ public class GameController : MonoBehaviour
         vida = Mathf.Clamp(vida + quantidade, 0f, 100f);
         barra.GerenciarVida(vida);
 
-        if (vida <= 0)
+        if (vida > 0)
         {
-            ShowGameOver();
+            return;
+        }
+        ShowGameOver();
+    }
+
+    public void AddRosa(int quantidade)
+    {
+        totalScoreRosas += quantidade;
+        UpdateScoreText();
+
+        if (totalScoreRosas % 10 == 0 && vida < 100)
+        {
+            AlterarVida(10f); 
         }
     }
 
