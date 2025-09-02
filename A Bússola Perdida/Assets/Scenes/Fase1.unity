@@ -8279,7 +8279,7 @@ MonoBehaviour:
   totalScorePocoes: 0
   scoreTextPocoes: {fileID: 1216503455}
   totalScoreRosas: 0
-  scoreTextRosas: {fileID: 0}
+  scoreTextRosas: {fileID: 2048540857}
   gameOver: {fileID: 1512713542}
   imagePocao: {fileID: 805610369}
   imageRosa: {fileID: 892268354}
@@ -11081,7 +11081,7 @@ GameObject:
   - component: {fileID: 2048540858}
   - component: {fileID: 2048540857}
   m_Layer: 5
-  m_Name: ScoreMoedas
+  m_Name: ScoreRosas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
